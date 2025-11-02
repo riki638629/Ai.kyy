@@ -1,0 +1,57 @@
+console.log('Hello World!');
+const express = require('express');
+const fs = require('fs');
+const path = require('path');
+const cors = require('cors');
+
+const app = express();
+const PORT = process.env.PORT || 3000;
+
+app.use(cors());
+app.use(express.json());
+app.use(express.static('public'));
+
+const ordersFile = path.join(__dirname, 'orders.json');
+
+function readOrders() {
+  try {
+    const data = fs.readFileSync(ordersFile, 'utf-8');
+    return JSON.parse(data);
+  } catch {
+    return [];
+  }
+}
+
+function saveOrders(orders) {
+  fs.writeFileSync(ordersFile, JSON.stringify(orders, null, 2));
+}
+
+app.post('/api/order', (req, res) => {
+  const { name, phone, orderType, details, harga } = req.body;
+  if (!name || !phone || !orderType || !details || harga == null) {
+    return res.status(400).json({ message: 'Semua field harus diisi lengkap' });
+  }
+
+  const orders = readOrders();
+  const newOrder = {
+    id: Date.now(),
+    name,
+    phone,
+    orderType,
+    details,
+    harga,
+    time: new Date().toLocaleString()
+  };
+  orders.push(newOrder);
+  saveOrders(orders);
+  res.status(201).json({ message: 'Order berhasil diterima', order: newOrder });
+});
+
+app.get('/api/orders', (req, res) => {
+  const orders = readOrders();
+  res.json(orders);
+});
+
+app.listen(PORT, () => {
+  console.log(`Server berjalan di http://localhost:${PORT}`);
+});

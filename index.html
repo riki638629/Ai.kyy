@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Toko Diamond — Mobile Legends</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Logo" onerror="this.style.display='none'"/>
+      <h1>DiamondShop</h1>
+    </div>
+    <div class="actions">
+      <input id="search" type="search" placeholder="Cari paket (mis. 86 diamond)" />
+      <button id="cartBtn" class="cart-btn">Keranjang (<span id="cartCount">0</span>)</button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="overlay"></div>
+      <div class="hero-content">
+        <h2>Top Up Diamond Mobile Legends</h2>
+        <p>Pilih paket, isi UID & server, lalu checkout. Aman & cepat.</p>
+        <a href="#products" class="btn-primary">Lihat Paket</a>
+      </div>
+    </section>
+
+    <section id="products" class="products container">
+      <!-- Product cards will be inserted by JS -->
+    </section>
+
+    <section class="checkout container" id="checkout" aria-hidden="true">
+      <h3>Checkout</h3>
+      <div class="checkout-grid">
+        <div class="checkout-cart">
+          <h4>Pesanan</h4>
+          <ul id="cartList"></ul>
+          <div class="total">Total: <span id="totalPrice">0</span> IDR</div>
+        </div>
+        <div class="checkout-form">
+          <h4>Detail Pembeli</h4>
+          <label>UID Player<input id="uid" type="text" placeholder="Masukkan UID"></label>
+          <label>Server<input id="server" type="text" placeholder="Masukkan server"></label>
+          <label>Nama / Nick<input id="playerName" type="text" placeholder="Contoh: Rafi"/></label>
+          <label>Metode Pembayaran
+            <select id="payMethod">
+              <option value="manual">Transfer Manual (contoh)</option>
+              <option value="ovo">OVO / Dana / LinkAja</option>
+              <option value="gopay">GoPay</option>
+            </select>
+          </label>
+          <button id="placeOrder" class="btn-primary">Place Order (Demo)</button>
+          <div id="orderMsg" class="order-msg"></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <small>© <span id="year"></span> DiamondShop — Demo. Jangan gunakan untuk transaksi nyata tanpa backend yang aman.</small>
+    </div>
+  </footer>
+
+  <div id="toast" class="toast" aria-hidden="true"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>

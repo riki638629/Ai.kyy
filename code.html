@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DiamondHub - Jual Diamond All Game</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .animate-fadeIn {
+            animation: fadeIn 1s ease-out forwards;
+        }
+        .game-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        .diamond-counter {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 font-sans">
+    <!-- Header -->
+    <header class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <div class="flex items-center space-x-2">
+                <div class="w-10 h-10 rounded-full diamond-counter flex items-center justify-center">
+                    <i class="fas fa-gem text-2xl"></i>
+                </div>
+                <h1 class="text-xl font-bold text-gray-800">DiamondHub</h1>
+            </div>
+            
+            <nav class="hidden md:flex space-x-8">
+                <a href="#games" class="text-gray-600 hover:text-purple-600 transition">Games</a>
+                <a href="#products" class="text-gray-600 hover:text-purple-600 transition">Produk</a>
+                <a href="#features" class="text-gray-600 hover:text-purple-600 transition">Fitur</a>
+                <a href="#testimonials" class="text-gray-600 hover:text-purple-600 transition">Testimoni</a>
+            </nav>
+            
+            <div class="flex items-center space-x-4">
+                <button class="md:hidden text-gray-600">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+                <button class="hidden md:block bg-purple-600 text-white px-4 py-2 rounded-lg hover:bg-purple-700 transition">
+                    Masuk/Daftar
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="bg-gradient-to-r from-purple-900 to-blue-900 text-white py-16">
+        <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+            <div class="md:w-1/2 mb-10 md:mb-0 animate-fadeIn">
+                <h1 class="text-4xl md:text-5xl font-bold mb-4">Belanja Diamond Lebih Murah & Cepat</h1>
+                <p class="text-xl mb-6 opacity-90">Top up diamond untuk semua game favoritmu dengan proses instan dan harga terjangkau.</p>
+                <div class="flex flex-col sm:flex-row space-y-3 sm:space-y-0 sm:space-x-4">
+                    <button class="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg font-medium transition">
+                        Beli Sekarang
+                    </button>
+                    <button class="bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-6 py-3 rounded-lg font-medium transition border border-white border-opacity-20">
+                        Lihat Produk
+                    </button>
+                </div>
+                <div class="mt-8 flex items-center space-x-4">
+                    <div class="flex -space-x-2">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/0e9083aa-18d9-495f-9b95-167c76927433.png" alt="Customer avatar 1" class="w-10 h-10 rounded-full border-2 border-white">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/617faef8-9e6c-49c3-be73-f638c35bdd61.png" alt="Customer avatar 2" class="w-10 h-10 rounded-full border-2 border-white">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/19f381bc-9b3b-4c3f-ba42-d4ce9c7d8da2.png" alt="Customer avatar 3" class="w-10 h-10 rounded-full border-2 border-white">
+                    </div>
+                    <div>
+                        <p class="text-sm opacity-80"><span class="font-semibold">10,000+</span> pelanggan puas</p>
+                    </div>
+                </div>
+            </div>
+            <div class="md:w-1/2 animate-fadeIn" style="animation-delay: 0.3s;">
+                <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/55d4eb9e-bae5-4fd5-84eb-054a101e8772.png" alt="Illustration of various game characters and diamonds floating around" class="rounded-lg shadow-xl">
+            </div>
+        </div>
+    </section>
+
+    <!-- Games Section -->
+    <section id="games" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12 animate-fadeIn">
+                <h2 class="text-3xl font-bold text-gray-800 mb-3">Game yang Kami Dukung</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Top up diamond untuk berbagai game populer dengan proses instan</p>
+            </div>
+            
+            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+                <!-- Mobile Legends -->
+                <div class="game-card bg-white rounded-xl p-4 shadow-md text-center transition cursor-pointer hover:border-purple-500 border border-gray-100">
+                    <div class="w-16 h-16 mx-auto mb-3">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ef82d38b-0ec8-4af0-a201-27b009940ad8.png" alt="Mobile Legends game logo" class="w-full h-full object-contain">
+                    </div>
+                    <h3 class="font-medium text-gray-800">Mobile Legends</h3>
+                </div>
+                
+                <!-- Free Fire -->
+                <div class="game-card bg-white rounded-xl p-4 shadow-md text-center transition cursor-pointer hover:border-purple-500 border border-gray-100">
+                    <div class="w-16 h-16 mx-auto mb-3">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/3e5263e6-ff51-44ec-8674-d3b2a4f1ed1c.png" alt="Free Fire game logo" class="w-full h-full object-contain">
+                    </div>
+                    <h3 class="font-medium text-gray-800">Free Fire</h3>
+                </div>
+                
+                <!-- PUBG Mobile -->
+                <div class="game-card bg-white rounded-xl p-4 shadow-md text-center transition cursor-pointer hover:border-purple-500 border border-gray-100">
+                    <div class="w-16 h-16 mx-auto mb-3">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/011ed36f-9fc4-41f3-a308-282d1bb98aff.png" alt="PUBG Mobile game logo" class="w-full h-full object-contain">
+                    </div>
+                    <h3 class="font-medium text-gray-800">PUBG Mobile</h3>
+                </div>
+                
+                <!-- Genshin Impact -->
+                <div class="game-card bg-white rounded-xl p-4 shadow-md text-center transition cursor-pointer hover:border-purple-500 border border-gray-100">
+                    <div class="w-16 h-16 mx-auto mb-3">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/2f29ec11-d97f-46f9-b775-921334f30adb.png" alt="Genshin Impact game logo" class="w-full h-full object-contain">
+                    </div>
+                    <h3 class="font-medium text-gray-800">Genshin Impact</h3>
+                </div>
+                
+                <!-- Valorant -->
+                <div class="game-card bg-white rounded-xl p-4 shadow-md text-center transition cursor-pointer hover:border-purple-500 border border-gray-100">
+                    <div class="w-16 h-16 mx-auto mb-3">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ad4b4612-b064-40da-a2a6-992d3e46d8ae.png" alt="Valorant game logo" class="w-full h-full object-contain">
+                    </div>
+                    <h3 class="font-medium text-gray-800">Valorant</h3>
+                </div>
+                
+                <!-- League of Legends -->
+                <div class="game-card bg-white rounded-xl p-4 shadow-md text-center transition cursor-pointer hover:border-purple-500 border border-gray-100">
+                    <div class="w-16 h-16 mx-auto mb-3">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5013134c-0deb-4aaf-a2c9-68330fbfd30e.png" alt="League of Legends game logo" class="w-full h-full object-contain">
+                    </div>
+                    <h3 class="font-medium text-gray-800">League of Legends</h3>
+                </div>
+            </div>
+            
+            <div class="text-center mt-10">
+                <button class="text-purple-600 font-medium hover:text-purple-800 transition flex items-center justify-center mx-auto">
+                    Lihat Semua Game <i class="fas fa-chevron-right ml-2"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-3">Pilihan Produk Diamond</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Pilih paket diamond sesuai kebutuhan dan budget Anda</p>
+            </div>
+            
+            <!-- Game Selector -->
+            <div class="max-w-lg mx-auto mb-12 bg-white rounded-full p-1 shadow-sm">
+                <div class="flex">
+                    <button class="flex-1 py-3 px-4 rounded-full bg-purple-600 text-white font-medium">
+                        Mobile Legends
+                    </button>
+                    <button class="flex-1 py-3 px-4 rounded-full text-gray-600 font-medium">
+                        Free Fire
+                    </button>
+                    <button class="flex-1 py-3 px-4 rounded-full text-gray-600 font-medium">
+                        PUBG Mobile
+                    </button>
+                </div>
+            </div>
+            
+            <!-- Diamond Packages -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Package 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg group">
+                    <div class="bg-purple-50 p-4 text-center">
+                        <h3 class="text-xl font-bold diamond-counter">86 Diamond</h3>
+                        <p class="text-sm text-gray-500">Standard</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-4">
+                            <span class="text-3xl font-bold text-gray-800">Rp 20.000</span>
+                            <span class="text-sm line-through text-gray-400 ml-2">Rp 25.000</span>
+                            <span class="block text-sm text-green-600 mt-1">Hemat 20%</span>
+                        </div>
+                        <ul class="space-y-2 mb-6 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Proses instan</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Bonus 2 Diamond</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Garansi 100%</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition">
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Package 2 (Best Seller) -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg group border-2 border-purple-500 relative">
+                    <div class="absolute -top-3 -right-3 bg-purple-500 text-white text-xs font-bold px-3 py-1 rounded-full">
+                        BEST SELLER
+                    </div>
+                    <div class="bg-purple-100 p-4 text-center">
+                        <h3 class="text-xl font-bold diamond-counter">172 Diamond</h3>
+                        <p class="text-sm text-gray-500">Popular</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-4">
+                            <span class="text-3xl font-bold text-gray-800">Rp 38.000</span>
+                            <span class="text-sm line-through text-gray-400 ml-2">Rp 50.000</span>
+                            <span class="block text-sm text-green-600 mt-1">Hemat 24%</span>
+                        </div>
+                        <ul class="space-y-2 mb-6 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Proses instan</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Bonus 10 Diamond</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Garansi 100%</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Support 24/7</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition">
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Package 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg group">
+                    <div class="bg-purple-50 p-4 text-center">
+                        <h3 class="text-xl font-bold diamond-counter">257 Diamond</h3>
+                        <p class="text-sm text-gray-500">Premium</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-4">
+                            <span class="text-3xl font-bold text-gray-800">Rp 55.000</span>
+                            <span class="text-sm line-through text-gray-400 ml-2">Rp 75.000</span>
+                            <span class="block text-sm text-green-600 mt-1">Hemat 27%</span>
+                        </div>
+                        <ul class="space-y-2 mb-6 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Proses instan</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Bonus 20 Diamond</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Garansi 100%</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Support 24/7</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition">
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+                
+                <!-- Package 4 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden transition hover:shadow-lg group">
+                    <div class="bg-purple-50 p-4 text-center">
+                        <h3 class="text-xl font-bold diamond-counter">344 Diamond</h3>
+                        <p class="text-sm text-gray-500">Deluxe</p>
+                    </div>
+                    <div class="p-6">
+                        <div class="text-center mb-4">
+                            <span class="text-3xl font-bold text-gray-800">Rp 70.000</span>
+                            <span class="text-sm line-through text-gray-400 ml-2">Rp 100.000</span>
+                            <span class="block text-sm text-green-600 mt-1">Hemat 30%</span>
+                        </div>
+                        <ul class="space-y-2 mb-6 text-gray-600">
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Proses instan</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Bonus 30 Diamond</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Garansi 100%</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Support 24/7</span>
+                            </li>
+                            <li class="flex items-center">
+                                <i class="fas fa-check-circle text-green-500 mr-2"></i>
+                                <span>Prioritas pengisian</span>
+                            </li>
+                        </ul>
+                        <button class="w-full bg-purple-600 hover:bg-purple-700 text-white py-2 px-4 rounded-lg font-medium transition">
+                            Beli Sekarang
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-3">Mengapa Memilih Kami?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Keunggulan yang membuat DiamondHub berbeda</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Feature 1 -->
+                <div class="text-center p-6 rounded-xl bg-gray-50">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">
+                        <i class="fas fa-bolt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Proses Instan</h3>
+                    <p class="text-gray-600">Diamond langsung masuk ke akun Anda dalam waktu kurang dari 5 menit setelah pembayaran</p>
+                </div>
+                
+                <!-- Feature 2 -->
+                <div class="text-center p-6 rounded-xl bg-gray-50">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">
+                        <i class="fas fa-percentage text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Harga Terbaik</h3>
+                    <p class="text-gray-600">Harga diamond lebih murah dibanding toko lainnya dengan bonus extra diamond</p>
+                </div>
+                
+                <!-- Feature 3 -->
+                <div class="text-center p-6 rounded-xl bg-gray-50">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">
+                        <i class="fas fa-shield-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Aman & Terpercaya</h3>
+                    <p class="text-gray-600">Transaksi aman dengan sistem pembayaran terlindungi dan garansi 100%</p>
+                </div>
+                
+                <!-- Feature 4 -->
+                <div class="text-center p-6 rounded-xl bg-gray-50">
+                    <div class="w-16 h-16 mx-auto mb-4 bg-purple-100 rounded-full flex items-center justify-center text-purple-600">
+                        <i class="fas fa-headset text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Support 24/7</h3>
+                    <p class="text-gray-600">Tim kami siap membantu Anda kapan saja jika mengalami kendala</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-purple-50">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-3">Testimoni Pelanggan</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Apa kata mereka tentang layanan DiamondHub</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Testimonial 1 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/5dec8b16-0506-4949-a99a-a68f19c3991d.png" alt="Customer photo - young man smiling" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Andi Pratama</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Pertama kali beli diamond di sini dan prosesnya sangat cepat! Harga lebih murah dari toko lain. Bakalan beli lagi deh."</p>
+                    <div class="mt-3 text-sm text-gray-500">
+                        <i class="fas fa-gamepad mr-2"></i> Mobile Legends
+                    </div>
+                </div>
+                
+                <!-- Testimonial 2 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/1cd719be-2ab5-4c70-b384-c70ac53282e5.png" alt="Customer photo - teenager with glasses" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Siti Nurhaliza</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"CS-nya ramah banget dan sabar ngejelasin ke aku yang baru pertama kali top up diamond. Sekarang cuma beli di DiamondHub aja."</p>
+                    <div class="mt-3 text-sm text-gray-500">
+                        <i class="fas fa-gamepad mr-2"></i> Genshin Impact
+                    </div>
+                </div>
+                
+                <!-- Testimonial 3 -->
+                <div class="bg-white p-6 rounded-xl shadow-sm">
+                    <div class="flex items-center mb-4">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/73b428b2-20cc-4db4-a600-a89b1e9ae84e.png" alt="Customer photo - young woman with headset" class="w-12 h-12 rounded-full mr-4">
+                        <div>
+                            <h4 class="font-bold">Rudi Hartono</h4>
+                            <div class="flex text-yellow-400">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-600">"Ga nyangka bisa dapat harga semurah ini buat diamond Free Fire. Prosesnya cepet banget, diamond masuk kurang dari 3 menit!"</p>
+                    <div class="mt-3 text-sm text-gray-500">
+                        <i class="fas fa-gamepad mr-2"></i> Free Fire
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-purple-900 to-blue-900 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-6">Siap Berlangganan Diamond?</h2>
+            <p class="text-xl opacity-90 mb-8 max-w-2xl mx-auto">Bergabung dengan ribuan gamers lainnya yang sudah merasakan kemudahan berbelanja di DiamondHub</p>
+            <div class="flex flex-col sm:flex-row justify-center space-y-3 sm:space-y-0 sm:space-x-4">
+                <button class="bg-white text-purple-600 hover:bg-gray-100 px-8 py-3 rounded-lg font-bold transition">
+                    Mulai Berbelanja
+                </button>
+                <button class="bg-white bg-opacity-10 hover:bg-opacity-20 text-white px-8 py-3 rounded-lg font-medium transition border border-white border-opacity-20">
+                    Lihat Panduan
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo & About -->
+                <div>
+                    <div class="flex items-center space-x-2 mb-4">
+                        <div class="w-10 h-10 rounded-full diamond-counter flex items-center justify-center">
+                            <i class="fas fa-gem text-2xl"></i>
+                        </div>
+                        <h2 class="text-xl font-bold text-white">DiamondHub</h2>
+                    </div>
+                    <p class="mb-4">Platform terbaik untuk top up diamond semua game favorit Anda dengan harga terjangkau dan proses instan.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="#" class="text-gray-400 hover:text-white transition">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Links -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Tautan Cepat</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Beranda</a></li>
+                        <li><a href="#games" class="hover:text-white transition">Game</a></li>
+                        <li><a href="#products" class="hover:text-white transition">Produk</a></li>
+                        <li><a href="#features" class="hover:text-white transition">Fitur</a></li>
+                        <li><a href="#testimonials" class="hover:text-white transition">Testimoni</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Game List -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Daftar Game</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white transition">Mobile Legends</a></li>
+                        <li><a href="#" class="hover:text-white transition">Free Fire</a></li>
+                        <li><a href="#" class="hover:text-white transition">PUBG Mobile</a></li>
+                        <li><a href="#" class="hover:text-white transition">Genshin Impact</a></li>
+                        <li><a href="#" class="hover:text-white transition">Valorant</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Contact -->
+                <div>
+                    <h3 class="text-white font-bold text-lg mb-4">Hubungi Kami</h3>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2"></i>
+                            <a href="mailto:cs@diamondhub.com" class="hover:text-white transition">cs@diamondhub.com</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fab fa-whatsapp mr-2"></i>
+                            <a href="https://wa.me/6281234567890" class="hover:text-white transition">+62 812-3456-7890</a>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2"></i>
+                            <span>Jakarta, Indonesia</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-700 mt-12 pt-6 text-center text-sm">
+                <p>© 2023 DiamondHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple animation on scroll
+        document.addEventListener('DOMContentLoaded', function() {
+            const animateOnScroll = function() {
+                const elements = document.querySelectorAll('.animate-fadeIn');
+                
+                elements.forEach(element => {
+                    const elementPosition = element.getBoundingClientRect().top;
+                    const screenPosition = window.innerHeight / 1.3;
+                    
+                    if (elementPosition < screenPosition) {
+                        element.style.opacity = '1';
+                        element.style.transform = 'translateY(0)';
+                    }
+                });
+            };
+            
+            // Initial check
+            animateOnScroll();
+            
+            // Check on scroll
+            window.addEventListener('scroll', animateOnScroll);
+            
+            // Game card interaction
+            const gameCards = document.querySelectorAll('.game-card');
+            gameCards.forEach(card => {
+                card.addEventListener('click', function() {
+                    // In a real app, this would navigate to the game's diamond page
+                    console.log('Selected game:', this.querySelector('h3').textContent);
+                    // For demo, just show an alert
+                    alert(`Membuka halaman diamond untuk ${this.querySelector('h3').textContent}`);
+                });
+            });
+        });
+    </script>
+</body>
+</html>
+
